@@ -1,38 +1,70 @@
-.App {
+#app {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#app .title {
+  background-color: teal;
+  margin-top: 0px;
+  padding: 1rem;
+}
+#app .cities {
+  text-align: left;
+  margin: 0.5rem 5rem;
+}
+#app .cities .form-checkbox {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  margin: 0.5rem;
+}
+#app .cities .form-checkbox .item-checkbox {
+  padding: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 1199px) {
+  #app .cities {
+    text-align: left;
+    margin: 0.2rem 2rem;
+  }
+  #app .cities .form-checkbox {
+    grid-template-columns: repeat(8, 1fr);
+    margin: 0.2rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 869px) {
+  #app .cities .form-checkbox {
+    grid-template-columns: repeat(6, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+  #app .title {
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 669px) {
+  #app .cities .form-checkbox {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media only screen and (max-width: 569px) {
+  #app .cities {
+    margin: 0.1rem 0.4rem;
+  }
+  #app .cities .form-checkbox .item-checkbox {
+    padding: 0.2rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #app {
+    font-size: x-small;
+  }
+  #app .title {
+    padding: 0.2rem;
+  }
+  #app .cities {
+    margin: 0.1rem;
+  }
+  #app .cities .form-checkbox .item-checkbox {
+    padding: 0.05rem;
   }
 }
